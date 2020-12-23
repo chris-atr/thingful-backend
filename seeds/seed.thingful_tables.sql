@@ -8,12 +8,12 @@ TRUNCATE
 
 INSERT INTO thingful_users (user_name, full_name, nickname, password)
 VALUES
-  ('dunder', 'Dunder Mifflin', null, 'password'),
-  ('b.deboop', 'Bodeep Deboop', 'Bo', 'bo-password'),
-  ('c.bloggs', 'Charlie Bloggs', 'Charlie', 'charlie-password'),
-  ('s.smith', 'Sam Smith', 'Sam', 'sam-password'),
-  ('lexlor', 'Alex Taylor', 'Lex', 'lex-password'),
-  ('wippy', 'Ping Won In', 'Ping', 'ping-password');
+  ('dunder', 'Dunder Mifflin', null, '$2a$04$8abWLoZbIO/usRU0Q2JNKujEvaJxlXQCLnW3AbraxzNJL2UrLN10y'),
+  ('b.deboop', 'Bodeep Deboop', 'Bo', '$2a$12$fPOrggSVWvDjBpDsxdYRg.1n7CBiqqXEm8Shf5ZtPk8OBlWXrZtoC'),
+  ('c.bloggs', 'Charlie Bloggs', 'Charlie', '$2a$12$et/i/vI6rkEk34.Eyf0MneE3Ok1gbuTeU1Hb5maJqQE1yTEQG8paC'),
+  ('s.smith', 'Sam Smith', 'Sam', '$2a$12$wRr6qNd7hZ2GGFGfthpXqOGlJM5gHNSQikMEMnw5DFR2m.M9Dqq8G'),
+  ('lexlor', 'Alex Taylor', 'Lex', '$2a$12$Ht/kVR.f.5pEmwH0uTOeQ.f2SHOAVB9s/PSJWPJ3Q2XzP7k3Ndc8S'),
+  ('wippy', 'Ping Won In', 'Ping', '$2a$12$qcqv47gjPwtEzsBbhsN3n.93dTH657F5LezvMU63b8FD5gQjOa4sq');
 
 INSERT INTO thingful_things (title, image, user_id, content)
 VALUES

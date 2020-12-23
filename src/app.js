@@ -15,8 +15,8 @@ app.use(morgan((NODE_ENV === 'production') ? 'tiny' : 'common', {
 app.use(cors())
 app.use(helmet())
 
-app.use('/api/things', thingsRouter)
-app.use('/api/reviews', reviewsRouter)
+app.use('/api/things', thingsRouter);
+app.use('/api/reviews', reviewsRouter);
 
 app.use(function errorHandler(error, req, res, next) {
   let response
