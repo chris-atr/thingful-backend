@@ -5,17 +5,14 @@ function requireAuth(req, res, next) {
   const authToken = req.get('Authorization') || '';
 
 
-  if (!authToken.toLowerCase().startsWith('basic ')) {
+  if (!authToken.toLowerCase().startsWith('bearer ')) {
     return res.status(401).json({ error: 'Missing basic token' })
   } else {
-    basToken = authToken.slice('basic basic '.length)
-    console.log('BasTOKEN', basToken);
+    basToken = authToken.slice('bearer '.length)
   }
 
   const [tkUserName, tkPassword] = AuthService.parseBasicToken(basToken);
 
-  console.log('USERNAME DATA', tkUserName);
-  console.log('PASSWORD DATA', tkPassword);
   if (!tkUserName || !tkPassword) {
     return res.status(401).json({ error: 'Unauthorized Request' })
   }

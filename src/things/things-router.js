@@ -1,10 +1,10 @@
 const express = require('express')
 const ThingsService = require('./things-service')
-const { requireAuth } = require('./../middleware/basic-auth');
+const { requireAuth } = require('./../middleware/jwt-auth');
 
 const thingsRouter = express.Router()
 
-thingsRouter
+thingsRouter 
   .route('/')
   .get((req, res, next) => {
     ThingsService.getAllThings(req.app.get('db'))
